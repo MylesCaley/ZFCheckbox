@@ -40,10 +40,10 @@ import UIKit
   func setup() {
     
     // default
-    self.lineWidth = 2;
-    self.lineColor = .orangeColor()
+    self.lineWidth = 7;
+    self.lineColor = .whiteColor()
     self.lineBackgroundColor = UIColor(white: 1, alpha: 0.3)
-    self.animateDuration = 0.4;
+    self.animateDuration = 0.6;
     
     self.line1Layer = CAShapeLayer(layer: self.layer)
     self.line2Layer = CAShapeLayer(layer: self.layer)
@@ -123,7 +123,6 @@ import UIKit
     
     let angle1 = CGFloat(13 * M_PI/12)
     let angle2 = CGFloat(9 * M_PI/5)
-//    
     let path1 = UIBezierPath()
     path1.moveToPoint(startPoint)
     path1.addArcWithCenter(center, radius: radius, startAngle: angle1, endAngle: angle2, clockwise: false)
@@ -134,8 +133,6 @@ import UIKit
     
     self.line1Layer!.path = path1.CGPath
     self.line2Layer!.path = path2.CGPath
-    
-    
     
   }
 
