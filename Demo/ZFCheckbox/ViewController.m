@@ -8,10 +8,11 @@
 
 #import "ViewController.h"
 #import "ZFCheckbox.h"
+#import "ZFCheckbox-Swift.h"
 
 @interface ViewController ()
 
-@property (weak, nonatomic) IBOutlet ZFCheckbox *checkbox;
+@property (weak, nonatomic) IBOutlet Checkbox  *checkbox;
 
 @end
 
@@ -20,8 +21,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.checkbox.animateDuration = 0.5;
-    self.checkbox.lineWidth = 6;
+//    self.checkbox.animateDuration = 0.5;
+//    self.checkbox.lineWidth = 2;
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle

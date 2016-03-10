@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B2A6D4B1C91EED700934501 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2A6D4A1C91EED700934501 /* Checkbox.swift */; };
 		DC64E0901AC91AE600164491 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC64E08F1AC91AE600164491 /* main.m */; };
 		DC64E0931AC91AE600164491 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC64E0921AC91AE600164491 /* AppDelegate.m */; };
 		DC64E0961AC91AE600164491 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC64E0951AC91AE600164491 /* ViewController.m */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B2A6D491C91EED700934501 /* ZFCheckbox-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZFCheckbox-Bridging-Header.h"; sourceTree = "<group>"; };
+		5B2A6D4A1C91EED700934501 /* Checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		DC64E08A1AC91AE600164491 /* ZFCheckbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZFCheckbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC64E08E1AC91AE600164491 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC64E08F1AC91AE600164491 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 			children = (
 				DCFF7E991AC9ADD1007F108E /* ZFCheckbox.h */,
 				DCFF7E9A1AC9ADD1007F108E /* ZFCheckbox.m */,
+				5B2A6D4A1C91EED700934501 /* Checkbox.swift */,
+				5B2A6D491C91EED700934501 /* ZFCheckbox-Bridging-Header.h */,
 			);
 			name = Classes;
 			path = ../../Classes;
@@ -177,7 +182,8 @@
 		DC64E0821AC91AE600164491 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0620;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
 				TargetAttributes = {
 					DC64E0891AC91AE600164491 = {
 						CreatedOnToolsVersion = 6.2;
@@ -236,6 +242,7 @@
 				DC64E0931AC91AE600164491 /* AppDelegate.m in Sources */,
 				DCFF7E9B1AC9ADD1007F108E /* ZFCheckbox.m in Sources */,
 				DC64E0901AC91AE600164491 /* main.m in Sources */,
+				5B2A6D4B1C91EED700934501 /* Checkbox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +304,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -357,9 +365,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ZFCheckbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zoonref.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "../Classes/ZFCheckbox-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -367,9 +379,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ZFCheckbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zoonref.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "../Classes/ZFCheckbox-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -387,6 +402,7 @@
 				);
 				INFOPLIST_FILE = ZFCheckboxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zoonref.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZFCheckbox.app/ZFCheckbox";
 			};
@@ -402,6 +418,7 @@
 				);
 				INFOPLIST_FILE = ZFCheckboxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zoonref.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZFCheckbox.app/ZFCheckbox";
 			};
